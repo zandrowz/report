@@ -1,5 +1,10 @@
     <div class="navbar">
-        <a href="/">Index</a> |
+        {# <a href="/">Index</a> |
         <a href="/about">About</a> |
-        <a href="/report">Report</a> |
+        <a href="/report">Report</a> | #}
+
+        <a href="{{ url("index") }}">Index</a> |
+        <a href="{{ path("about") }}">About</a> |
+        <a href="{{ path("report") }}">Report</a>
+
     </div>

@@ -4,56 +4,14 @@
 <body>
     {% include 'incl/nav.html.twig' %}
 <div class="content">
-        <h1>Report</h1>
 
-<h2>Kmom01</h2>
-<p>Jag har samlat på mig kunskap om objektorientering från kursen oopython, men jag har inte hunnit slutföra den kursen av olika anledningnar.
-Men av de kursmoment jag gjort så har jag fått förståelse för vad objektorientering innebär. Även i kursen JavaScript gick vi igenom grundläggande
-om objektorientering, objekt och klasser. Även databaskursen tog upp en del om objekt och moduler. Hittills känns det som att jag har haft
-nytta av nästan alla tidigare kurser vi läst under första läsåret, främst från webtec och designkursen. Därför kändes det inte så svårt att
-komma igång på egen hand med kursmomentet, utan jag gjorde det stegvis och tittade tillbaka då och då på vad jag gjort i föregående kurser.<br>
+{% apply markdown_to_html %}
+Report
+======
 
-För att skapa en klass i PHP använder man order 'class' följt av namnet på klassen. Namnet på klassen ska bestå av en stor begynnelsebokstav,
-och ord inom klassnamn skiljs genom gemen/versal-skillnader. Inom en klass så måste vi deklarera variabler, vilket inte krävs annars. 
-Dessa variabler kallas medlemsvariabler och dessa deklareras för att kunna komma åt dom från det objekt som skapas av klassen.
-Funktioner som finns i en klass kallas metoder. I metoderna finns en variabel, $this, som används i klassens metoder för att referera till
-det objekt som anropar metoden. Man kan säga att en klass är en slags mall som man använder för att skapa nya objekt.<br>
+{% endapply %}
 
-Jag började med att gå igenom alla filer och mappar för att försöka förstå mig på strukturen för Symfony. Jag kände ingen mycket från designkursen
-där vi använt oss av twigfiler och strukturen därifrån. Störst hjälp fick jag av referensmanualsen för Symfony, den var tydlig och mer lättläst
-än tidigare referensmanualer jag läst.<br>
-
-I artikeln "PHP The Right Way" fann jag kapitlet "Security" extra intressant då it-säkerhet är ett ämne som jag börjat intressera mig för. I dagens samhälle
-och oroliga värld är it-säkerhet mer aktuellt än någonsin. Artikeln tar upp flera saker som är bra att tänka på vad gäller webbapplikationer och säkerhet, t.ex.
-hur man skyddar lösenord som lagras i databasen och hur viktigt det är att INTE lita 100% på input-data man får genom GET och POST. En annan intressant sak som artikeln
-tar upp är hur man ska hantera "Error logging" på webben. Att det kan exponera information om strukturen av ens applikation och att alla då kan ta del av det, vilket
-man kanske inte vill. Detta har jag inte tänkt på innan.<br>
-
-TIL för detta kursmoment är att titta igenom referensmanualen mer noggrannt innan jag påbörjar ett kursmoment. Mycket hjälp går att hitta där för att snabbare komma igång.
-</p>
-
-<h2>Kmom02</h2>
-<p>
-</p>
-
-<h2>Kmom03</h2>
-<p>
-</p>
-
-<h2>Kmom04</h2>
-<p>
-</p>
-
-<h2>Kmom05</h2>
-<p>
-</p>
-
-<h2>Kmom06</h2>
-<p>
-</p>
-
-<h2>Kmom07/10</h2>
-</p>
+{{ include('report/kmom01.markdown.twig')|markdown_to_html }}
 
 </div>
 
