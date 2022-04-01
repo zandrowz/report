@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+
+@media (max-width: 767px) {
+    .content {
+        width: 96%;
+        padding: 2em 0 1em;
+    }
+
+    .footer {
+        padding: 1em 0;
+    }
+}
+
+html {
+    overflow-y: scroll;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #E5EAEE;
+}
+
+.header {
+    display: flex;
+    background-image: url("../images/cherryfl.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+    justify-content: center;
+    position: relative;
+    text-shadow: 2px 2px black;
+    font-size: 26px;
+    font-weight: bold;
+    font-family: 'Roboto';
+    padding: 3em;
+    height: 300px;
+}
+
+.header-text {
+    text-align: center;
+    position: absolute;
+    color: #8B615D;
+    top: 280px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+.navbar {
+    text-align: center;
+    background-color: #E5EAEE;
+    margin-bottom: 24px;
+    padding: 0.5em;
+    margin-bottom: 5px;
+}
+
+.navbar a {
+    font-family:monospace;
+    font-size: 20px;
+    display: inline-block;
+    padding: 0.5em;
+    color: grey;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    color: #D67E70;
+}
+
+.navbar a.selected {
+    color: #D67E70;
+}
+
+.content {
+    margin: 0 auto;
+    max-width: 800px;
+    /* font-family:'Libre Baskerville'; */
+    font-family: 'Lora', serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+    line-height: 1.4;
+    /* text-align: center;
+    align-content: center; */
+    background-color: #E5EAEE;
+    padding: 3em;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    color: black;
+    justify-content: center;
+    align-items: center;
+}
+footer{
+    /* position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0; */
+    background-color: rgb(235, 202, 196);
+    height: auto;
+    width: 100vw;
+    padding-top: 20px;
+    color: #fff;
+}
+
+.footer-content{
+    font-family: 'Lora', serif;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 10px;
+}
+
+a.ex2 {
+    color: white;
+}
+  a.ex2:hover {
+    color: #D67E70;
+}
+
+a {
+    color: grey;
+}
+
+a:hover {
+    color: #D67E70;
+}
+
+h3 {
+    margin-bottom: 3px;
+}
