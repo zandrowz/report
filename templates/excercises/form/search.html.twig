@@ -1,0 +1,22 @@
+{# templates/search.html.twig #}
+{% include 'incl/header.html.twig' %}
+<title>Search</title>
+
+<body>
+    {% include 'incl/nav.html.twig' %}
+
+<div class="content">
+<form>
+    <p>
+        <label>Search:
+            <input type="search" name="search" value="{{ search }}">
+        </label>
+    </p>
+</form>
+
+</div>
+
+{% include 'incl/footer.html.twig' %}
+
+</body>
+</html>

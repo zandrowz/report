@@ -1,0 +1,30 @@
+{# templates/session.html.twig #}
+{% include 'incl/header.html.twig' %}
+<title>Session</title>
+
+<body>
+    {% include 'incl/nav.html.twig' %}
+
+<div class="content">
+
+<form method="post">
+    <fieldset>
+    <legend>A dice game</legend>
+
+    <p>
+        <input type="submit" name="roll" value="Roll">
+        <input type="submit" name="save" value="Save">
+        <input type="submit" name="clear" value="Clear">
+        <input type="submit" name="info" value="Info">
+    </p>
+
+    {{ include('block/flash-message.html.twig') }}
+
+    </fieldset>
+</form>
+</div>
+
+{% include 'incl/footer.html.twig' %}
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+{# templates/deck.html.twig #}
+{% include 'incl/header.html.twig' %}
+<title>Deck</title>
+<body>
+    {% include 'incl/nav.html.twig' %}
+
+    <div class="content-cards">
+
+        <h1>Deck</h1>
+
+<p>
+{# Cards = {{ deck_cards }} #}
+</p>
+        <div class="card">
+            {% for card in deck_cards %}
+            <div class="cards">
+            <span>
+                {# {{ card.getCard() }} #}
+                {{ card.getSuit() | raw}}
+                {{ card.getValue() | raw}}
+            </span>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+
+{% include 'incl/footer.html.twig' %}
+
+</body>
+</html>

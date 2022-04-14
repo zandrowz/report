@@ -1,0 +1,29 @@
+{# templates/card.html.twig #}
+{% include 'incl/header.html.twig' %}
+<title>Card</title>
+<body>
+    {% include 'incl/nav.html.twig' %}
+
+    <div class="content">
+    <img src="images/deck.jpg" width="300px" height="200" alt="Kortlek"/>
+        <h1>Bygg kort och kortlek i PHP och Symfony</h1>
+
+<h2>Classes</h2>
+    <ul>
+        <li><a href="{{ path("deck") }}">card/deck</a></li>
+        <li><a href="{{ path("shuffle") }}">card/deck/shuffle</a></li>
+        <li><a href="{{ path("draw") }}">card/deck/draw</a></li>
+        <li><a href="{{ path("draw-number", {number: 5}) }}">card/deck/draw/:number</a></li>
+        <li><a href="{{ path("players", {players: 2, number: 4}) }}">card/deck/deal/:players/:cards</a></li>
+        <li><a href="{{ path("deck2") }}">card/deck2</a></li>
+    </ul>
+<h2>JSON API</h2>
+    <ul>
+        <li><a href="{{ path("jsonapi") }}">JSON API | GET</a></li>
+    </ul>
+    </div>
+
+{% include 'incl/footer.html.twig' %}
+
+</body>
+</html>

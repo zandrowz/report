@@ -13,7 +13,6 @@ class ReportController extends AbstractController
      */
     public function index(): Response
     {
-
         return $this->render('index.html.twig');
     }
 
@@ -22,7 +21,6 @@ class ReportController extends AbstractController
      */
     public function about(): Response
     {
-
         return $this->render('about.html.twig');
     }
 
@@ -31,7 +29,6 @@ class ReportController extends AbstractController
      */
     public function report(): Response
     {
-
         return $this->render('report.html.twig');
     }
 }

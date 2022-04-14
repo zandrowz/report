@@ -1,0 +1,22 @@
+{# templates/search.html.twig #}
+{% include 'incl/header.html.twig' %}
+<title>Search</title>
+
+<body>
+    {% include 'incl/nav.html.twig' %}
+
+<div class="content">
+
+<p>The dice is rolled {{ numRolls }} times.</p>
+
+<ul>
+    {% for roll in rolls %}
+        <li>{{ roll }}</li>
+    {% endfor %}
+</ul>
+</div>
+
+{% include 'incl/footer.html.twig' %}
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+{# templates/search.html.twig #}
+{% include 'incl/header.html.twig' %}
+<title>Search</title>
+
+<body>
+    {% include 'incl/nav.html.twig' %}
+
+<div class="content">
+    <a href="{{ path("dice-home") }}">Home</a>
+    <a href="{{ path("dice-hand-home") }}">Hand</a>
+    <a href="{{ path("dice-graphic-home") }}">Graphic</a>
+
+
+<p>The dice is rolled once.</p>
+
+<p>Dice value = {{ die_value }} and its string representation is {{ die_as_string }}</p>
+
+<p><a href="{{ link_to_roll }}">Roll the dice five times</a>.</p>
+
+</div>
+
+{% include 'incl/footer.html.twig' %}
+
+</body>
+</html>

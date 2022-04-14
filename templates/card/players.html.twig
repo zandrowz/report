@@ -1,0 +1,39 @@
+{% include 'incl/header.html.twig' %}
+<title>Deck</title>
+<body>
+    {% include 'incl/nav.html.twig' %}
+
+    <div class="content-cards">
+
+{# <p>You draw {{ app.request.get('number') }} cards.</p> #}
+
+{# <p>Cards left in deck:</p> #}
+        <div class="card">
+            {% for newPlayer in players %}
+        Player {{ newPlayer.player() }}:
+            {% for card in newPlayer.playerCards() %}
+            <div class="cards">
+            <span class="symbol">
+                {{ card.getCard() }}
+            </span>
+            </div>
+            {% endfor %}
+            {% endfor %}
+        </div>
+
+<p>Cards left in deck: {{ deck|length }}</p>
+        <div class="card">
+            {% for card in deck %}
+            <div class="cards">
+            <span class="symbol">
+                {{ card.getCard() }}
+            </span>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+{% include 'incl/footer.html.twig' %}
+
+</body>
+</html>
