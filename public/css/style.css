@@ -185,5 +185,13 @@ h3 {
 
 span {
     content: "\2665";
+    color: black;
+  }
+
+.hearts, .diamonds {
     color: red;
-  } 
+}
+
+.spades, .clubs {
+    color: black;
+}

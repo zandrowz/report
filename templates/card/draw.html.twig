@@ -11,7 +11,7 @@
 
         <div class="card">
             <div class="cards">
-                {{ card.getCard() }}
+                {{ card.getCard() | raw}}
             </div>
         </div>
 {# <p>Cards left in deck: {{ card[1] }} </p> #}
@@ -20,7 +20,7 @@
             {% for card in deck %}
             <div class="cards">
             <span class="symbol">
-                {{ card.getCard() }}
+                {{ card.getCard() | raw}}
             </span>
             </div>
             {% endfor %}

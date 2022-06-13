@@ -6,16 +6,17 @@
     <div class="content-cards">
 
 
-<p>You draw {{ app.request.get('number') }} cards.</p>
-
-{# <p>Cards left in deck:</p> #}
+{# <p>You draw {{ app.request.get('number') }} cards.</p> #}
+    {% if cards %}
         <div class="card">
             {% for card in cards %}
-            <div class="cards">
-            <span class="symbol">
-                {{ card.getCard() }}
-            </span>
-            </div>
+                {% if card %}
+                    <div class="cards">
+                    <span class="symbol">
+                        {{ card.getCard() | raw}}
+                    </span>
+                    </div>
+                {% endif %}
             {% endfor %}
         </div>
 
@@ -24,12 +25,17 @@
             {% for card in deck %}
             <div class="cards">
             <span class="symbol">
-                {{ card.getCard() }}
+                {{ card.getCard() | raw}}
             </span>
             </div>
             {% endfor %}
         </div> 
     </div>
+    {% else %}
+        <p>Empty Deck</p>
+        <p><a href="{{ path("shuffle") }}">Shuffle deck and get new cards.</a></p>
+
+    {% endif %}
 
 {% include 'incl/footer.html.twig' %}
 

@@ -59,7 +59,7 @@ class CardController extends AbstractController
         $deck = $session->get("deck") ?? new \App\Card\Deck();
         //var_dump($deck->draw());
         $data = [
-            'card' => $deck->draw(count($deck->deck())),
+            'card' => $deck->drawCard(),
             'deck' => $deck->deck(),
         ];
 
@@ -80,8 +80,16 @@ class CardController extends AbstractController
     {
         $cards = [];
         $deck = $session->get("deck") ?? new \App\Card\Deck();
-        for ($i = 1; $i <= $number; $i++) {
-            array_push($cards, $deck->draw(count($deck->deck())));
+        $max = count($deck->deck());
+        if ($number > $max) {
+            $number = $max;
+        }
+        // for ($i = 1; $i <= $number; $i++) {
+        //     array_push($cards, $deck->draw(count($deck->deck())));
+        // }
+
+        for ($i = 0; $i < $number; $i++) {
+            $cards[] = $deck->drawCard();
         }
         $data = [
             'cards' => $cards,
@@ -105,7 +113,7 @@ class CardController extends AbstractController
         for ($j = 1; $j <= $players; $j++) {
             $newPlayer = new \App\Card\Player(strval($j));
             for ($i = 1; $i <= $number; $i++) {
-                $newPlayer->addCardsToPlayer($deck->draw(count($deck->deck())));
+                $newPlayer->addCardsToPlayer($deck->drawCard());
             }
             array_push($playersArray, $newPlayer);
         }

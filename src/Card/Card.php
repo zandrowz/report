@@ -41,4 +41,9 @@ class Card
     {
         return $this->getSuit() . ' ' . $this->getValue();
     }
+
+        public function getColor(): string
+    {
+        return $this->color;
+    }
 }
